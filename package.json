@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "appwrite": "^4.0.2",
     "vue": "^3.2.6"
   },
   "devDependencies": {
@@ -14,6 +15,8 @@
     "@vue/compiler-sfc": "^3.2.6",
     "typescript": "^4.3.2",
     "vite": "^2.5.4",
-    "vue-tsc": "^0.2.2"
+    "vite-plugin-windicss": "^1.4.4",
+    "vue-tsc": "^0.2.2",
+    "windicss": "^3.1.7"
   }
 }
