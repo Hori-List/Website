@@ -28,7 +28,7 @@ if (parameters.has('userId') && parameters.has('secret')) {
 </script>
 
 <template>
-  <p v-if="successful">Your email has successfully been verified.</p>
+  <p v-if="success">Your email has successfully been verified.</p>
   <p v-else>Welcome.</p>
 </template>
 
