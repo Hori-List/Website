@@ -10,14 +10,20 @@ appwrite.setEndpoint(endpoint).setProject(project);
 
 const parameters = new URLSearchParams(window.location.search);
 
-let successful = false;
+let error = '';
+let success = false;
 
 if (parameters.has('userId') && parameters.has('secret')) {
   const userId = parameters.get('userId') as string;
   const secret = parameters.get('secret') as string;
 
-  appwrite.account.updateVerification(userId, secret);
-  successful = true;
+  appwrite.account.updateVerification(userId, secret).then((res) => {
+    console.log(res)
+  }, (err) => {
+    error = err;
+    console.log(err);
+  });
+  success = true;
 }
 </script>
 
